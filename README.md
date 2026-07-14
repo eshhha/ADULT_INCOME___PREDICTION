@@ -1,4 +1,4 @@
-*Adult Income Dataset - Exploratory Data Analysis & Data Preprocessing
+## Adult Income Dataset - Exploratory Data Analysis & Data Preprocessing
 
 This project was completed as a group activity during the **Artificial Intelligence & Machine Learning Course at ICTAK Trivandrum**. The objective of this project is to understand the Adult Income Dataset through Exploratory Data Analysis (EDA) and perform comprehensive data preprocessing techniques to prepare the dataset for Machine Learning model development.
 
