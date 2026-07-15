@@ -203,6 +203,57 @@ Purpose:
 - Scikit-learn
 
 ---
+# Instructions to Run the Project
+
+## Step 1
+
+Clone the repository.
+
+```bash
+git clone https://github.com/your-username/Adult-Income-EDA.git
+```
+
+## Step 2
+
+Navigate to the project folder.
+
+```bash
+cd Adult-Income-EDA
+```
+
+## Step 3
+
+Install the required Python libraries.
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+```
+
+or
+
+```bash
+pip install -r requirements.txt
+```
+
+## Step 4
+
+Launch Jupyter Notebook.
+
+```bash
+jupyter notebook
+```
+
+## Step 5
+
+Open the notebook:
+
+```
+Adult_Income_prediction(preprocessing).ipynb
+```
+
+Run all cells sequentially to reproduce the complete preprocessing workflow.
+
+---
 
 # Project Outcomes
 
