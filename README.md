@@ -310,7 +310,7 @@ This project was collaboratively developed by:
 - **Aleena Philip**
 - **Esha Manohar**
 - **Mohammed Naif**
-- **Tojo Tom**
+- **Tojo Tom Kattakayam**
 
 ---
 
