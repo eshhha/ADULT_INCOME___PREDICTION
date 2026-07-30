@@ -1,321 +1,321 @@
-## Adult Income Dataset - Exploratory Data Analysis & Data Preprocessing
+# Adult Income Prediction using Machine Learning
 
-This project was completed as a group activity during the **Artificial Intelligence & Machine Learning Course at ICTAK Trivandrum**. The objective of this project is to understand the Adult Income Dataset through Exploratory Data Analysis (EDA) and perform comprehensive data preprocessing techniques to prepare the dataset for Machine Learning model development.
+##  Project Overview
+
+This project aims to predict whether an individual's annual income exceeds **$50K** using demographic and employment-related information from the Adult Census Income dataset.
+
+The project covers the complete machine learning workflow, including:
+
+- Exploratory Data Analysis (EDA)
+- Data preprocessing
+- Feature engineering
+- Model building
+- Hyperparameter tuning
+- Model validation
+- Ensemble learning
+- Performance evaluation
+
+The objective is to compare multiple machine learning algorithms and identify the best-performing model for income classification.
 
 ---
 
-## Dataset Source
+# Dataset Information
 
-**Dataset Name:** Adult Income Dataset
+- **Dataset Name:** Adult Census Income Dataset
+- **Source:** UCI Machine Learning Repository
+- **Dataset Link:**
+  https://archive.ics.uci.edu/dataset/2/adult
 
-**Source:** UCI Machine Learning Repository
+### Target Variable
 
-https://archive.ics.uci.edu/dataset/2/adult
-
----
-
-## Problem Statement
-
-The objective of this dataset is to predict whether an individual's annual income exceeds **$50,000** based on demographic, educational, and occupational attributes.
-
-Target Variable:
-
-- Income
+- **income**
   - <=50K
   - >50K
 
 ---
 
-## Dataset Understanding
+# Exploratory Data Analysis (EDA)
 
-Before preprocessing, the dataset was explored to understand its structure and quality.
+The following analyses were performed before model building:
 
-The following analyses were performed:
-
-- Loaded the dataset using Pandas.
-- Displayed the first and last few records.
-- Checked dataset dimensions.
-- Inspected column names and data types.
-- Generated statistical summaries.
-- Identified numerical and categorical features.
-- Examined the distribution of the target variable.
-- Identified missing values.
-- Detected duplicate records.
-- Understood feature relationships.
-
----
-
-## Exploratory Data Analysis (EDA)
-
-The following visualizations were created to better understand the dataset.
-
-### Numerical Feature Analysis
-
-- Histogram
-- Box Plot
-
-
-Purpose:
-
-- Understand data distribution
-- Detect skewness
-- Identify outliers
+- Dataset inspection
+- Shape of dataset
+- Data types
+- Missing value analysis
+- Duplicate record analysis
+- Statistical summary
+- Distribution plots
+- Count plots
+- Correlation heatmap
+- Outlier detection
+- Feature relationship analysis
 
 ---
 
+# Data Preprocessing
 
-### Correlation Analysis
+The following preprocessing steps were carried out:
 
-Correlation Heatmap was generated for numerical variables.
+### 1. Missing Value Handling
 
-Purpose:
+- Identified missing values
+- Replaced missing categorical values where necessary
 
-- Detect highly correlated features
-- Understand feature relationships
-- Reduce redundancy
+### 2. Duplicate Removal
 
----
+- Checked and removed duplicate records
 
-########################################################################################################
+### 3. Outlier Handling
 
-# Data Preprocessing - Adult Income Dataset
+- Detected outliers using statistical methods
+- Removed or treated extreme values where applicable
 
-The dataset was cleaned and transformed before applying Machine Learning algorithms.
+### 4. Encoding
 
-The preprocessing steps include:
-
-## 1. Missing Value Handling
-
-Missing values were identified and handled appropriately.
-
-Techniques used:
-
-- Mode Imputation (Categorical Features)
-- Median/Mean Imputation (Numerical Features)
-- Verified that no missing values remained.
-
----
-
-## 2. Duplicate Removal
-
-Duplicate observations were detected and removed to improve data quality.
-
-Steps:
-
-- Checked duplicate records.
-- Removed duplicate rows.
-- Verified the updated dataset.
-
----
-
-## 3. Data Cleaning
-
-The following cleaning operations were performed:
-
-- Removed unnecessary spaces.
-- Standardized categorical values.
-- Verified data types.
-- Converted columns into appropriate formats.
-
----
-
-########################################################################################################
-
-# Outlier Handling - Adult Income Dataset
-
-Outliers were detected primarily in numerical features.
-
-The following procedure was followed:
-
-- Identified outliers using **Box Plot**.
-- Calculated the **Interquartile Range (IQR)**.
-- Determined lower and upper boundaries.
-- Applied IQR clipping to reduce the effect of extreme values.
-  
-
-Purpose:
-
-- Improve model performance
-- Reduce noise
-- Preserve important observations
-
----
-
-########################################################################################################
-
-# Data Transformation - Adult Income Dataset
-
-After cleaning, the dataset was transformed into a Machine Learning-ready format.
-
-## Encoding
-
-Categorical variables were converted into numerical values using:
+Categorical features were converted into numerical format using:
 
 - Label Encoding
 - One-Hot Encoding
-- Ordinal Encoding (where applicable)
+- Ordinal Encoding
 
-Purpose:
+### 5. Feature Scaling
 
-- Enable Machine Learning algorithms to process categorical data.
+Numerical features were standardized using:
 
----
+- StandardScaler
 
-## Feature Scaling
+### 6. Train-Test Split
 
-Numerical features were normalized using:
+Dataset split into:
 
-### Standard Scaling
-
-Applied to:
-
-- Normally distributed numerical features
-
-Purpose:
-
-- Standardize features with mean = 0 and standard deviation = 1.
+- Training set
+- Testing set
 
 ---
 
-### Min-Max Scaling
+# Machine Learning Models
 
-Applied where appropriate to transform values into the range:
+The following machine learning algorithms were implemented.
 
-0 → 1
-
-Purpose:
-
-- Improve convergence of distance-based algorithms.
-- Ensure features have similar scales.
+| Model | Description |
+|--------|-------------|
+| Logistic Regression | Linear classification model |
+| Decision Tree | Tree-based classifier |
+| K-Nearest Neighbors (KNN) | Distance-based classifier |
+| Support Vector Machine (SVM) | Margin-based classifier |
+| Gaussian Naive Bayes | Probabilistic classifier |
+| Gradient Boosting | Boosting ensemble model |
+| AdaBoost | Adaptive boosting classifier |
+| Artificial Neural Network (ANN) | Deep learning model |
 
 ---
 
-########################################################################################################
+# Team Member Contributions
+
+| Team Member | Models Implemented |
+|-------------|-------------------|
+| **Esha Manohar** | Exploratory Data Analysis (EDA), Logistic Regression, Stacking |
+| **Muhammed Naif** | Data Preprocessing, K-Nearest Neighbors (KNN), Gradient Boosting |
+| **Aleena Philip** | Feature Scaling, Decision Tree, Bagging |
+| **Tojo Tom** | Encoding, Support Vector Machine (SVM), AdaBoost, Naive Bayes,Bagging |
 
 
-# Libraries Used
+---
+
+# Validation Techniques
+
+To ensure reliable model performance, the following validation techniques were used:
+
+- Train-Test Split
+- Stratified K-Fold Cross Validation
+- Cross Validation Score
+
+These techniques reduce bias and provide a better estimate of model performance on unseen data.
+
+---
+
+# Hyperparameter Tuning
+
+Hyperparameter optimization was performed using:
+
+- GridSearchCV
+- RandomizedSearchCV
+
+Parameters tuned include:
+
+- Number of neighbors (KNN)
+- Maximum depth (Decision Tree)
+- Regularization parameter C (Logistic Regression)
+- Kernel type (SVM)
+- Number of estimators (Boosting models)
+- Learning rate
+- Tree depth
+- Smoothing parameter (Naive Bayes)
+
+---
+
+# Ensemble Models
+
+The project includes the following ensemble learning techniques.
+
+## Bagging
+
+- Base Estimator: Decision Tree
+- Multiple trees trained on random subsets
+- Final prediction through majority voting
+
+## Gradient Boosting
+
+- Sequential boosting approach
+- Each model corrects previous model errors
+
+## AdaBoost
+
+- Adaptive boosting classifier
+- Focuses on misclassified samples
+
+## Stacking
+
+Base Models:
+
+- K-Nearest Neighbors
+- Decision Tree
+
+Meta Model:
+
+- Logistic Regression
+
+---
+
+# Model Evaluation
+
+The models were evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Cross Validation Score
+
+These metrics help compare the classification performance of different algorithms.
+
+---
+
+# Results
+
+After training and evaluation:
+
+- Multiple classification models were compared.
+- Hyperparameter tuning improved overall model performance.
+- Ensemble learning methods generally achieved better predictive performance than individual models.
+- Stacking and boosting models demonstrated competitive results on the Adult Income dataset.
+
+> You can include a table of final accuracies here after running all models.
+
+Example:
+
+| Model | Accuracy |
+|---------|----------|
+| Logistic Regression | 0.8449 |
+| Decision Tree | 0.8197 |
+| KNN | 0.8290 |
+| SVM | 0.8486 |
+| Naive Bayes | 0.7554 |
+| Gradient Boosting | 0.8633 |
+| AdaBoost | 0.8501 |
+| Bagging | 0.8554 |
+| Stacking | 0.8515 |
+| ANN | 0.8516 |
+
+---
+
+# Technologies Used
 
 - Python
-- Pandas
+- Google Colab
 - NumPy
+- Pandas
 - Matplotlib
 - Seaborn
 - Scikit-learn
+- TensorFlow / Keras
 
 ---
-# Instructions to Run the Project
 
-## Step 1
+# How to Run the Project
 
-Clone the repository.
-
-```bash
-git clone https://github.com/your-username/Adult-Income-EDA.git
-```
-
-## Step 2
-
-Navigate to the project folder.
+### Clone the repository
 
 ```bash
-cd Adult-Income-EDA
+git clone https://github.com/your-username/Adult_Income_Prediction.git
 ```
 
-## Step 3
-
-Install the required Python libraries.
+### Navigate to the project directory
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+cd Adult_Income_Prediction
 ```
 
-or
+### Install required libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Step 4
+### Open the notebook
 
-Launch Jupyter Notebook.
-
-```bash
-jupyter notebook
-```
-
-## Step 5
-
-Open the notebook:
+Launch Jupyter Notebook or Google Colab and open:
 
 ```
 Adult_Income_prediction(preprocessing).ipynb
 ```
 
-Run all cells sequentially to reproduce the complete preprocessing workflow.
+### Run all cells sequentially
+
+The notebook performs:
+
+1. Data loading
+2. EDA
+3. Preprocessing
+4. Feature engineering
+5. Model training
+6. Hyperparameter tuning
+7. Ensemble learning
+8. Model evaluation
 
 ---
 
-# Project Outcomes
+# Project Structure
 
-By completing this project, we successfully:
-
-✔ Understood the Adult Income Dataset
-
-✔ Performed comprehensive Exploratory Data Analysis
-
-✔ Cleaned the dataset
-
-✔ Handled missing values
-
-✔ Removed duplicate records
-
-✔ Detected and treated outliers
-
-✔ Encoded categorical features
-
-✔ Scaled numerical variables
-
-✔ Prepared the dataset for Machine Learning model development
+```
+Adult_Income_Prediction/
+│
+├── Adult_Income_prediction.ipynb
+├── adult.csv
+├── README.md
+├── requirements.txt
+└── images/
+```
 
 ---
 
-# Future Scope
+# References
 
-The preprocessed dataset can be used for building and evaluating Machine Learning classification models such as:
-
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- Support Vector Machine (SVM)
-- K-Nearest Neighbors (KNN)
-- Naïve Bayes
-- Gradient Boosting
-- XGBoost
-
-Model performance can be evaluated using:
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC Score
-- Confusion Matrix
-
----
-
-# Contributors
-
-This project was collaboratively developed by:
-
-- **Aleena Philip**
-- **Esha Manohar**
-- **Mohammed Naif**
-- **Tojo Tom Kattakayam**
+- UCI Machine Learning Repository
+- Scikit-learn Documentation
+- TensorFlow Documentation
+- Pandas Documentation
 
 ---
 
 # License
 
-This project is intended for educational and learning purposes under the ICTAK Data Science & Machine Learning Program.
+This project is developed for educational and academic purposes.
 
 ---
+
+# Acknowledgements
+
+We thank the UCI Machine Learning Repository for providing the Adult Census Income dataset and the open-source Python community for the machine learning libraries used in this project.
+
+
